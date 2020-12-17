@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo a mexer com DOM</title>
+
+    <style>
+
+        body {
+            font: normal 40 "Times New Roman";
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+    <h1>Manipulando dom</h1>
+    <p>Isso ai menó</p>
+
+    <script>
+        let h1 = document.body.getElementsByTagName("p")[0];
+        h1.style.backgroundColor="red";
+        document.write(h1.innerText)
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+
+    <style>
+
+        body{
+            background-color: lightblue;
+            color: darkred;            
+            font: normal 14pt Arial;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <script>
+
+        var nome = window.prompt("Digite seu nome")
+        document.write(`Ola ${nome}! </br>`)
+        document.write(`Seu nome tem ${nome.length} letras </br>`)
+        document.write(`Seu nome em maiusculo ${nome.toUpperCase()} </br>`)
+        document.write(`Seu nome em maiusculo ${nome.toLowerCase()} </br>`)
+    
+    </script>
+</body>
+</html>
