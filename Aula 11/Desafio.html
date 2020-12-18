@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Aula 11</title>
+</head>
+<body>
+    <h1>SUA NACIONALIDADE</h1>
+    Qual seu pais de origem?</br><input type="text" id = "texto1">
+    <input type="button" id="botao" value="enviar" onclick="verificar()">
+    <div id = "res"></div>
+
+    <script>
+        function verificar(){
+            var pais = document.getElementById("texto1").value
+            var res = document.getElementById("res")
+            res.innerHTML = `<p>Vivendo no Brasil, mas nasceu em ${pais}</p>`
+            if(pais == "Brasil"){
+                res.innerHTML += "Você é <strong>Brasileiro</strong>"
+            }else{
+                res.innerHTML += "Você é <strong>Estrangeiro</strong>"
+            }
+    }
+    </script>
+</body>
+</html>
