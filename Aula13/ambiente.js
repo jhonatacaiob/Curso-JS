@@ -1,9 +1,7 @@
-var c = 1
-while (c<= 6){
-    console.log("ISI") 
+console.log("TESTE")
+for (var i = 0; i < 60; i++){
+
+    console.log(i)
 
 }
-var c = 1
-do{
-   console.log("ISI") 
-}while (c<= 6)
+console.log("cabp")

@@ -1,0 +1,10 @@
+ body{
+            font: normal 20px Arial;
+            color: white;
+            background-color: darkgrey;
+       }
+       #numero{
+           width:20px;
+           background-color:darkgrey;
+           color: white;
+       }    
