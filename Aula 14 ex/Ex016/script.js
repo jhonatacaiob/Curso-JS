@@ -12,19 +12,18 @@ function carregar(){
             campo3.value = 1
         }
         res.innerHTML = "Contando: "
-        if(campo3.value < 0){
-            for(var i = Number(Math.max(campo2.value, campo1.value)); i > Number(Math.min(campo2.value, campo1.value)); i += Number(campo3.value)){
+        if(campo2.value > campo1.value){
+            for(var i = Number(campo1.value); i < Number(campo2.value); i += Math.abs(Number(campo3.value))){
                 res.innerHTML += `${i}->`
             }
-            res.innerHTML += Number(Math.min(campo2.value, campo1.value))
-
+            res.innerHTML += campo2.value
         }else{
-            for(var i = Number(Math.min(campo2.value, campo1.value)); i < Number(Math.max(campo2.value, campo1.value)); i += Number(campo3.value)){
+            var incremento = Math.abs(Number(campo3.value)) * (-1)
+            for(var i = Number(campo1.value); i > Number(campo2.value); i += incremento){
+                console.log(incremento)
                 res.innerHTML += `${i}->`
             }
-            res.innerHTML += Number(Math.max(campo2.value, campo1.value))
-
-
+            res.innerHTML += campo2.value
         }
         
 
