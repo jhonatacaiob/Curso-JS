@@ -7,20 +7,18 @@ function carregar(){
 
   
     if (campo1.value.length != 0 && campo2.value.length != 0 && campo3.value.length != 0) {
-        if(campo3.value == 0){
-            alert("Valor invalido, considerarei como 1")
+        if(campo3.value <= 0){
+            alert("Valor invalido, considerarei passo como 1")
             campo3.value = 1
         }
         res.innerHTML = "Contando: "
         if(campo2.value > campo1.value){
-            for(var i = Number(campo1.value); i < Number(campo2.value); i += Math.abs(Number(campo3.value))){
+            for(var i = Number(campo1.value); i < Number(campo2.value); i += Number(campo3.value)){
                 res.innerHTML += `${i}->`
             }
             res.innerHTML += campo2.value
         }else{
-            var incremento = Math.abs(Number(campo3.value)) * (-1)
-            for(var i = Number(campo1.value); i > Number(campo2.value); i += incremento){
-                console.log(incremento)
+            for(var i = Number(campo1.value); i > Number(campo2.value); i -= Number(campo3.value)){
                 res.innerHTML += `${i}->`
             }
             res.innerHTML += campo2.value
